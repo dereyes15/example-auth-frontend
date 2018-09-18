@@ -13,10 +13,10 @@ class RegisterPage extends Component {
 			errors: "",
 			form: {
 				user: {
-					firstName: "test",
-					lastName: "test1",
-					email: "test@example.com",
-					password: "123134",
+					firstName: "",
+					lastName: "",
+					email: "",
+					password: "",
 				}
 			}
 		}
@@ -26,11 +26,13 @@ class RegisterPage extends Component {
 		let { firstName, lastName, email, password } = this.state.form.user
 		return (
 			<main>
-				<h2>Welcome! Register here.</h2>
+				<h2>Welcome! Register here.</h2> <h6> ...and sign your life away... </h6>
+				
 				<form onSubmit={this.onSubmit}>
 					<input
 						type="text"
 						name="firstName"
+						placeholder = "Enter your first name"
 						value={firstName}
 						onChange={this.onChange}
 					/>
@@ -38,12 +40,14 @@ class RegisterPage extends Component {
 					<input
 						type="text"
 						name="lastName"
+						placeholder = "Enter your last name"
 						value={lastName}
 						onChange={this.onChange}
 					/>
 					<input
 						type="email"
 						name="email"
+						placeholder = "Enter your email"
 						value={email}
 						onChange={this.onChange}
 					/>
@@ -51,6 +55,7 @@ class RegisterPage extends Component {
 					<input
 						type="password"
 						name="password"
+						placeholder = "Create a password"
 						value={password}
 						onChange={this.onChange}
 					/>
